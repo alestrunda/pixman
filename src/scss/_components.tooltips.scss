@@ -1,0 +1,46 @@
+.tooltip {
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out;
+    pointer-events: none;
+    @include z-index(tooltip);
+  }
+
+  &::after {
+    transform: translateX(-50%);
+    border-style: solid;
+    border-color: transparent;
+    border-width: 8px 5px;
+    border-top-color: map-get($map: $colors, $key: gray-dark);
+    content: "";
+  }
+
+  &::before {
+    transform: translate(-50%, -100%);
+    content: attr(data-title);
+    background-color: map-get($map: $colors, $key: gray-dark);
+    color: #fff;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: map-get($map: $font-sizes, $key: small);
+    font-weight: 600;
+    padding: 1px 8px 3px;
+    min-width: 120px;
+    text-align: center;
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

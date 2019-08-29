@@ -1,0 +1,19 @@
+.page-footer {
+  background-color: #fff;
+  text-align: center;
+  font-size: map-get($map: $font-sizes, $key: small);
+  font-weight: 700;
+  padding-top: 45px;
+  padding-bottom: 45px;
+
+  @include break(md) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.page-header {
+  background-color: #fff;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}

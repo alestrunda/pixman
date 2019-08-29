@@ -1,0 +1,31 @@
+.button {
+  display: inline-block;
+  border: 1px solid map-get($map: $colors, $key: green);
+  border-radius: 23px;
+  font-weight: 700;
+  color: map-get($map: $colors, $key: green);
+  background-color: #fff;
+  padding: 10px 20px;
+  min-width: 236px;
+  text-align: center;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background-color: map-get($map: $colors, $key: green);
+    color: #fff;
+  }
+}
+
+.button-clean {
+  display: inline-block;
+  font-weight: 700;
+  color: map-get($map: $colors, $key: green);
+  padding: 4px 12px 3px;
+  border-radius: 8px;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background-color: map-get($map: $colors, $key: green);
+    color: #fff;
+  }
+}

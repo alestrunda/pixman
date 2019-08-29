@@ -1,0 +1,65 @@
+{
+  "name": "pixman",
+  "description": "Pixman interview assignment",
+  "version": "0.1.0",
+  "author": "Aleš Trunda",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alestrunda/pixman"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "stylelint": "^10.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "stylelint-config-standard": "^18.3.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "declaration-block-no-duplicate-properties": true,
+      "at-rule-empty-line-before": [
+        "never",
+        {
+          "ignoreAtRules": [
+            "import"
+          ]
+        }
+      ],
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "function",
+            "if",
+            "each",
+            "else",
+            "error",
+            "include",
+            "mixin",
+            "return",
+            "warn"
+          ]
+        }
+      ]
+    }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
+}

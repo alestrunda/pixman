@@ -1,0 +1,61 @@
+.row-head {
+  display: flex;
+  align-items: center;
+
+  @include break(lg) {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.row-head__btn {
+  @include break-min(lg) {
+    display: none;
+  }
+}
+
+.row-head__nav {
+  flex-grow: 1;
+
+  @include break(lg) {
+    display: none;
+    padding-top: 20px;
+    width: 100%;
+  }
+}
+
+.row-update {
+  display: flex;
+  font-weight: 300;
+  align-items: baseline;
+  justify-content: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  @include break(md) {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+
+.row-update__btn {
+  @include break(md) {
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+  }
+}
+
+.row-update__content {
+  padding-left: 12px;
+  padding-right: 12px;
+
+  @include break(md) {
+    flex-grow: 1;
+  }
+}
+
+.row-update__date {
+  color: map-get($map: $colors, $key: gray);
+  font-size: map-get($map: $font-sizes, $key: tiny);
+}

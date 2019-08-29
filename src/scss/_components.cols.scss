@@ -1,0 +1,12 @@
+.cols-two {
+  columns: 2;
+  column-gap: 120px;
+
+  @include break(lg) {
+    column-gap: 60px;
+  }
+
+  @include break(md) {
+    columns: 1;
+  }
+}

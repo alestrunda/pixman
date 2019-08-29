@@ -1,0 +1,64 @@
+.nav-main {
+  display: flex;
+  text-transform: uppercase;
+  color: map-get($map: $colors, $key: dark);
+  font-size: map-get($map: $font-sizes, $key: big);
+  text-align: center;
+  justify-content: flex-end;
+  padding-top: 5px;
+
+  > li {
+    padding-left: 12px;
+    padding-right: 12px;
+
+    > a {
+      position: relative;
+      display: block;
+      padding: 5px 2px;
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: map-get($map: $colors, $key: green);
+        opacity: 0;
+        transition: all 0.2s ease-out;
+        content: '';
+      }
+
+      &:hover {
+        color: map-get($map: $colors, $key: green);
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.active > a {
+      color: map-get($map: $colors, $key: green);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    @include break(lg) {
+      flex-grow: 1;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+  @include break(lg) {
+    justify-content: center;
+    font-size: map-get($map: $font-sizes, $key: default);
+  }
+
+  @include break(md) {
+    flex-direction: column;
+    align-items: center;
+  }
+}

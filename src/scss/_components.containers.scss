@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  max-width: 1080px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include break(lg) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include break(md) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.container--fluid {
+  max-width: none;
+}
+
+.container--slider {
+  padding-left: 120px;
+  padding-right: 120px;
+  max-width: 1220px;
+
+  @include break(xl) {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  @include break(md) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}

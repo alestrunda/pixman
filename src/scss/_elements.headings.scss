@@ -1,0 +1,27 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  margin: 0;
+  line-height: map-get($map: $line-heights, $key: mid);
+}
+
+h1,
+h2 {
+  font-size: 48px;
+
+  @include break(md) {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  font-size: 36px;
+
+  @include break(md) {
+    font-size: 30px;
+  }
+}
