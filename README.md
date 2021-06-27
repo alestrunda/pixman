@@ -7,7 +7,7 @@ Simple HTML web page - interview assignment.
 * npm
 * gulp
 * SASS
-* ITCSS (BEM)
+* ITCSS (using BEM)
 * ES6+
 * jQuery
 
